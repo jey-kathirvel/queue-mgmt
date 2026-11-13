@@ -1,0 +1,24 @@
+{
+  "name": "rabbitmq-queue-management-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "RabbitMQ queue management and QA automation portfolio demo",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test test/*.test.js",
+    "check": "node --check src/app.js && node --check src/broker.js && node --check src/worker.js && node --check src/server.js"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "supertest": "^7.0.0"
+  }
+}
